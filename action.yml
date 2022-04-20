@@ -1,0 +1,5 @@
+name: "Zip it"
+description: "Build waydroid for ubuntu or debian"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
