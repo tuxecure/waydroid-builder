@@ -29,3 +29,8 @@ jobs:
 
       - name: build debs
         uses: ./
+
+      - name: Make release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: /waydroid-packages/packages/*.deb
