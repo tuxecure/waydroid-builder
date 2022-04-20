@@ -4,7 +4,7 @@ A GitHub Action for building packages
 
 ## Usage
 
-Customize following example workflow and save as `.github/workflows/zip-it.yml` on your source repository.
+Customize following example workflow and save as `.github/workflows/wbuilder.yml` on your source repository.
 
 
 ```yaml
