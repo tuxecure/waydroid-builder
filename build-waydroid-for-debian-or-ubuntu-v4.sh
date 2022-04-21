@@ -38,14 +38,9 @@ do
   echo -e "${GREEN}==> Building package: ${i} ...${NC}"
   debuild -b -uc -us
   echo -e "${GREEN}==> Building package: ${i}, done.${NC}\n"
-  cd /waydroid-packages
   echo -e "${GREEN}==> Installing packages ...${NC}"
-  dpkg -i *.deb && \
-  echo -e "${GREEN}==> Installing ${i} packages success${NC}" || \
-  ( echo -e "${RED}==> Installing ${i} packages error ${NC}" && \
-  echo -e "${GREEN}==> Trying to fix it${NC}" )
-  apt install -f -y
-  echo -e "${GREEN}==> Installing packages, done.${NC}\n"
+  apt-get install -y /waydroid-packages/*.deb && \
+  echo -e "${GREEN}==> Installing ${i} packages success${NC}"|| exit 1
   mv *.deb packages 2> /dev/null
   mv *.ddeb packages 2> /dev/null
   rm -rf ${i}
