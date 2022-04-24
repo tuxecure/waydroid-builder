@@ -35,7 +35,7 @@ do
   debuild -b -uc -us
   echo -e "${GREEN}==> Building package: ${i}, done.${NC}\n"
   echo -e "${GREEN}==> Installing packages ...${NC}"
-  apt-get install -y /waydroid-packages/*.deb && \
+  apt-get install -y ./*.deb && \
   echo -e "${GREEN}==> Installing ${i} packages success${NC}"|| exit 1
   mv *.deb packages 2> /dev/null
   mv *.ddeb packages 2> /dev/null
