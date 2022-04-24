@@ -13,7 +13,7 @@ repos=(
   "https://github.com/waydroid/gbinder-python.git"
   "https://github.com/waydroid/waydroid.git"
 )
-mkdir /waydroid-packages/packages
+mkdir packages
 for i in ${repos[@]}
 do
   url=${i}
@@ -41,13 +41,12 @@ do
   echo -e "${GREEN}==> Installing ${i} packages success${NC}"|| exit 1
   mv *.deb packages 2> /dev/null
   mv *.ddeb packages 2> /dev/null
-  pwd
-  ls packages/*
+  ls packages
   rm -rf ${i}
   echo -e "${GREEN}==========> Done building ${i} <==========${NC}\n"
 done
 
 echo -e "${GREEN}==> Packages archive saved in /waydroid-packages/packages/${NC}"
-ls -1 /waydroid-packages/packages/
+ls -1 packages/
 echo
-rm -f /waydroid-packages/*.* 2> /dev/null
+rm -f *.* 2> /dev/null
