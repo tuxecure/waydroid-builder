@@ -3,9 +3,6 @@
 # date  : 2022-04-08
 # author: Wachid Adi Nugroho <wachidadinugroho.maya@gmail.com>
 
-wget -O /usr/bin/build_changelog https://raw.githubusercontent.com/MrCyjaneK/waydroid-build/main/build_changelog
-chmod +x /usr/bin/build_changelog
-
 GREEN='\033[0;32m'
 RED='\033[0;31m'
 NC='\033[0m'
@@ -29,7 +26,7 @@ do
   echo 12 > debian/compat
   if [ ! -f debian/changelog ]; then
     echo -e "${GREEN}==> Building changelog ${i} ...${NC}"
-    build_changelog
+    /build_changelog
     echo -e "${GREEN}==> Building changelog ${i}, done.${NC}\n"
   fi
   echo -e "${GREEN}==> Building dependencies ...${NC}"
@@ -50,4 +47,4 @@ done
 echo -e "${GREEN}==> Packages archive saved in /waydroid-packages/packages/${NC}"
 ls -1 /waydroid-packages/packages/
 echo
-rm -f /waydroid-packages/*.*  /usr/bin/build_changelog 2> /dev/null
+rm -f /waydroid-packages/*.* 2> /dev/null
