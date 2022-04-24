@@ -8,5 +8,6 @@ COPY build-waydroid-for-debian-or-ubuntu-v4.sh /build-waydroid-for-debian-or-ubu
 RUN chmod +x /build-waydroid-for-debian-or-ubuntu-v4.sh
 
 WORKDIR /waydroid-packages
+RUN mkdir packages
 VOLUME /waydroid-packages
 ENTRYPOINT ["/build-waydroid-for-debian-or-ubuntu-v4.sh"]
