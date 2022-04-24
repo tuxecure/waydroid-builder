@@ -40,6 +40,8 @@ do
   echo -e "${GREEN}==> Installing ${i} packages success${NC}"|| exit 1
   mv *.deb packages 2> /dev/null
   mv *.ddeb packages 2> /dev/null
+  pwd
+  ls packages/*
   rm -rf ${i}
   echo -e "${GREEN}==========> Done building ${i} <==========${NC}\n"
 done
