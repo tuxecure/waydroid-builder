@@ -13,6 +13,7 @@ repos=(
   "https://github.com/waydroid/gbinder-python.git"
   "https://github.com/waydroid/waydroid.git"
 )
+mkdir /waydroid-packages/packages
 for i in ${repos[@]}
 do
   url=${i}
