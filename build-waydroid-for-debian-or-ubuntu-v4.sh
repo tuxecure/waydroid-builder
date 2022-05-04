@@ -33,7 +33,7 @@ do
   mk-build-deps -ir -t "apt-get -o Debug::pkgProblemResolver=yes -y --no-install-recommends"
   echo -e "${GREEN}==> Building dependencies, done...${NC}\n"
   echo -e "${GREEN}==> Building package: ${i} ...${NC}"
-  debuild -b -uc -us
+  debuild -b -uc -us || { echo -e "${RED}==> Building package: ${i}, failed.${NC}\n"; exit 1; }
   echo -e "${GREEN}==> Building package: ${i}, done.${NC}\n"
   echo -e "${GREEN}==> Installing packages ...${NC}"
   cd ..
