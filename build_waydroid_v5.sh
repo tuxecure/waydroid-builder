@@ -52,7 +52,8 @@ do
 
     echo -e "${GREEN}==========> Start installing ${i} <==========${NC}"
     echo -e "${GREEN}==> Installing package(s): ${i} ...${NC}"
-    apt-get install ../*.deb
+    cd ..
+    apt-get install ./*.deb
     if [ ! $? -eq 0 ]
     then
       echo -e "${RED}==> Installing ${i}, error.${NC}"
