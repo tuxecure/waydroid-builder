@@ -10,8 +10,8 @@ RED='\033[1;91m'
 GREEN='\033[1;92m'
 
 repos=(
-  "https://github.com/sailfishos/libglibutil.git"
-  "https://github.com/mer-hybris/libgbinder.git"
+  "https://github.com/waydroid/libglibutil.git"
+  "https://github.com/waydroid/libgbinder.git"
   "https://github.com/waydroid/gbinder-python.git"
   "https://github.com/waydroid/waydroid.git"
 )
